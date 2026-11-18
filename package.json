@@ -1,0 +1,49 @@
+{
+  "name": "cardguard",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build && node scripts/build-content.mjs && node scripts/verify-build.mjs",
+    "test:core": "vitest run tests/core.test.ts",
+    "test:integration": "vitest run tests/integration.test.ts",
+    "test:security": "vitest run tests/security.test.ts",
+    "test:browser": "node scripts/browser-test.mjs",
+    "test:background": "vitest run tests/background.test.ts",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"tests/*.ts\" \"scripts/*.mjs\"",
+    "test:workspace": "vitest run tests/workspace.test.ts",
+    "test:catalog": "vitest run tests/serviceCatalog.test.ts",
+    "test:sessions": "vitest run tests/rememberedSession.test.ts",
+    "test:dashboard": "vitest run tests/dashboard.test.ts",
+    "test:browser:sessions": "node scripts/session-browser-test.mjs",
+    "test:password-entry": "vitest run tests/passwordEntry.test.ts",
+    "test:calendar": "vitest run tests/calendar.test.ts",
+    "test:i18n": "vitest run tests/i18n.test.ts",
+    "build:icons": "node scripts/build-icons.mjs",
+    "build:store-assets": "node scripts/store-assets.mjs",
+    "test:reminder-preferences": "vitest run tests/reminderPreferences.test.ts",
+    "test:enhancements": "vitest run tests/detectionEnhancements.test.ts",
+    "test:browser:enhancements": "node scripts/enhancements-browser-test.mjs",
+    "test:calendar-presentation": "vitest run tests/calendarPresentation.test.ts",
+    "test:browser:calendar": "node scripts/calendar-browser-test.mjs"
+  },
+  "dependencies": {
+    "@internationalized/date": "^3.12.4",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-aria-components": "^1.22.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/chrome": "^0.0.287",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "prettier": "^3.10.1",
+    "typescript": "~5.7.3",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
+  }
+}

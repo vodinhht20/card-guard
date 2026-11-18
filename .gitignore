@@ -1,0 +1,21 @@
+node_modules/
+dist/
+coverage/
+test-results/
+*.local
+
+# Local tools, credentials and editor files
+.agents/
+.codex/
+.aws/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+
+# Redundant extracted release bundles
+/release/cardguard-[0-9]*/
+/release/cardguard-store-assets/
+/release/cardguard-store-assets.zip
